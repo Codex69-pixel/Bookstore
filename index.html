@@ -3,72 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore</title>
-    <link rel="stylesheet" href="styles.css">  
+    <meta name="description" content="Book Store is a welcoming independent bookstore for curious readers.">
+    <title>Book Store | Independent Bookstore</title>
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Bookstore</h1>
-        <nav>
+    <header class="site-header">
+        <a class="brand" href="#hero" aria-label="Book Store home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5A2.5 2.5 0 0 0 17.5 16H6.5A2.5 2.5 0 0 0 4 18.5v-13Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20M8 7h8M8 10h6"/></svg></span>
+            <span class="brand-name"><strong>Book</strong><strong>Store</strong></span>
+        </a>
+        <input class="menu-toggle" type="checkbox" id="menu-toggle">
+        <label class="menu-button" for="menu-toggle"><span class="sr-only">Toggle navigation menu</span><span></span><span></span><span></span></label>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="#hero">Home</a></li>
                 <li><a href="#fiction">Fiction</a></li>
-                <li><a href="#non-fiction">Non-Fiction</a></li>
-                <li><a href="#staff-picks">Staff Picks</a></li>
+                <li><a href="#non-fiction">Non-fiction</a></li>
+                <li><a href="#staff-picks">Staff picks</a></li>
                 <li><a href="#events">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <a class="header-cta" href="#contact">Visit us <span aria-hidden="true">↗</span></a>
     </header>
 
     <main>
         <section id="hero" class="hero">
-            <h2>Discover Your Next Favorite Book</h2>
-            <p>Explore our collection of bestsellers and new releases.</p>
-        </section>
-
-        <!-- Fiction Books Section -->
-        <section id="fiction" class="fiction">
-            <h2>Fiction Books</h2>
-            <div class="fiction-list">
-                <!-- Book items will be dynamically inserted here -->
+            <div class="hero-content">
+                <p class="eyebrow">Independent books for curious minds</p>
+                <h1>Find a story that <em>stays</em> with you.</h1>
+                <p class="hero-copy">Take your time, browse freely, and discover your next favourite read in a space made for readers.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#fiction">Browse the shelves <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="#events">See what's on <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="hero-note"><span class="avatar-stack" aria-hidden="true"><i>R</i><i>M</i><i>J</i></span><span>Beloved by readers in Nairobi and beyond</span></div>
+            </div>
+            <div class="hero-art" aria-label="A selection of books in the shop">
+                <div class="hero-glow"></div>
+                <img class="hero-main-image" src="Images/Hero_Image.avif" alt="Readers browsing books in a bright library">
+                <div class="hero-book hero-book-one"><img src="Images/fiction/River_sing_me_home.jpg" alt="River Sing Me Home book cover"></div>
+                <div class="hero-book hero-book-two"><img src="Images/staffpick/all_we_hunger_for.jpg" alt="All We Hunger For book cover"></div>
+                <span class="floating-tag"><span aria-hidden="true">✦</span> New stories, always</span>
             </div>
         </section>
 
-        <!-- Non-Fiction Books Section -->
-        <section id="non-fiction" class="non-fiction">
-            <h2>Non-Fiction Books</h2>
-            <div class="non-fiction-list">
-                <!-- Book items will be dynamically inserted here -->
+        <section id="fiction" class="content-section fiction">
+            <div class="section-heading">
+                <div><p class="eyebrow">Lose yourself</p><h2>Fiction <span>for every feeling.</span></h2></div>
+                <a class="text-link" href="#contact">Explore fiction <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="card-grid">
+                <article class="book-card">
+                    <div class="image-wrap"><img src="Images/fiction/River_sing_me_home.jpg" alt="Cover of River Sing Me Home"><span class="card-label">Editor's choice</span></div>
+                    <div class="book-info"><p class="card-kicker">Historical fiction</p><h3>River Sing Me Home</h3><p class="author">by Eleanor Shearer</p><div class="card-footer"><strong>KES 2,400</strong><a class="icon-link" href="#contact" aria-label="Ask about River Sing Me Home">↗</a></div></div>
+                </article>
+                <article class="book-card">
+                    <div class="image-wrap"><img src="Images/fiction/Marked_by_time.jpg" alt="Cover of Marked by Time"><span class="card-label">Reader favourite</span></div>
+                    <div class="book-info"><p class="card-kicker">Contemporary fiction</p><h3>Marked by Time</h3><p class="author">A story of memory and becoming</p><div class="card-footer"><strong>KES 1,950</strong><a class="icon-link" href="#contact" aria-label="Ask about Marked by Time">↗</a></div></div>
+                </article>
+                <article class="book-card">
+                    <div class="image-wrap"><img src="Images/fiction/how_soon_is_now.jpg" alt="Cover of How Soon Is Now"><span class="card-label">Just in</span></div>
+                    <div class="book-info"><p class="card-kicker">Literary fiction</p><h3>How Soon Is Now</h3><p class="author">A bold, bright coming-of-age</p><div class="card-footer"><strong>KES 1,800</strong><a class="icon-link" href="#contact" aria-label="Ask about How Soon Is Now">↗</a></div></div>
+                </article>
             </div>
         </section>
-                
-        <!-- Staff Picks Section -->
-        <section id="staff-picks" class="staff-picks">
-            <h2>Staff Picks</h2>
-            <div class="book-list">
-                <!-- Staff pick book items will be dynamically inserted here -->
+
+        <section id="non-fiction" class="content-section non-fiction">
+            <div class="section-heading"><div><p class="eyebrow">Stay curious</p><h2>Non-fiction <span>to widen your world.</span></h2></div><a class="text-link" href="#contact">Explore non-fiction <span aria-hidden="true">→</span></a></div>
+            <div class="card-grid">
+                <article class="book-card"><div class="image-wrap"><img src="Images/nonfiction/the_rebirth_of_you.jpg" alt="Cover of The Rebirth of You"><span class="card-label">New arrival</span></div><div class="book-info"><p class="card-kicker">Personal growth</p><h3>The Rebirth of You</h3><p class="author">A practical guide to starting again</p><div class="card-footer"><strong>KES 2,100</strong><a class="icon-link" href="#contact" aria-label="Ask about The Rebirth of You">↗</a></div></div></article>
+                <article class="book-card"><div class="image-wrap"><img src="Images/nonfiction/like_a_normal_person.jpg" alt="Cover of Like a Normal Person"><span class="card-label">Staff favourite</span></div><div class="book-info"><p class="card-kicker">Essays</p><h3>Like a Normal Person</h3><p class="author">Notes on living an extraordinary life</p><div class="card-footer"><strong>KES 1,850</strong><a class="icon-link" href="#contact" aria-label="Ask about Like a Normal Person">↗</a></div></div></article>
+                <article class="book-card"><div class="image-wrap"><img src="Images/nonfiction/find_some_joy.jpg" alt="Cover of Find Some Joy"><span class="card-label">Feel good read</span></div><div class="book-info"><p class="card-kicker">Wellbeing</p><h3>Find Some Joy</h3><p class="author">Small rituals for a fuller life</p><div class="card-footer"><strong>KES 1,700</strong><a class="icon-link" href="#contact" aria-label="Ask about Find Some Joy">↗</a></div></div></article>
             </div>
         </section>
-        <!-- Events Section -->
-        <section id="events" class="events">
-            <h2>Upcoming Events</h2>
-            <div class="event-list">
-                <!-- Event items will be dynamically inserted here -->
+
+        <section id="staff-picks" class="content-section staff-picks">
+            <div class="section-heading"><div><p class="eyebrow">Our booksellers' desk</p><h2>Staff picks <span>worth talking about.</span></h2></div><a class="text-link" href="#contact">Get a recommendation <span aria-hidden="true">→</span></a></div>
+            <div class="card-grid">
+                <article class="book-card"><div class="image-wrap"><img src="Images/staffpick/images.jpg" alt="Staff pick book cover"><span class="card-label">A bookseller's pick</span></div><div class="book-info"><p class="card-kicker">Our current obsession</p><h3>A book worth sharing</h3><p class="author">For thoughtful afternoons and long weekends</p><div class="card-footer"><strong>KES 2,000</strong><a class="icon-link" href="#contact" aria-label="Ask about this staff pick">↗</a></div></div></article>
+                <article class="book-card"><div class="image-wrap"><img src="Images/staffpick/a_plagued-sea.jpg" alt="Cover of A Plagued Sea"><span class="card-label">A bookseller's pick</span></div><div class="book-info"><p class="card-kicker">Adventure</p><h3>A Plagued Sea</h3><p class="author">A sweeping story of courage and coastlines</p><div class="card-footer"><strong>KES 2,250</strong><a class="icon-link" href="#contact" aria-label="Ask about A Plagued Sea">↗</a></div></div></article>
+                <article class="book-card"><div class="image-wrap"><img src="Images/staffpick/all_we_hunger_for.jpg" alt="Cover of All We Hunger For"><span class="card-label">A bookseller's pick</span></div><div class="book-info"><p class="card-kicker">Memoir</p><h3>All We Hunger For</h3><p class="author">A tender meditation on desire and home</p><div class="card-footer"><strong>KES 2,300</strong><a class="icon-link" href="#contact" aria-label="Ask about All We Hunger For">↗</a></div></div></article>
             </div>
         </section>
-        <!-- Contact Section -->
+
+        <section id="events" class="content-section events">
+            <div class="section-heading"><div><p class="eyebrow">Come together</p><h2>Make a date <span>with a good story.</span></h2></div><a class="text-link" href="#contact">Host an event <span aria-hidden="true">→</span></a></div>
+            <div class="event-grid">
+                <article class="event-card"><img src="Images/events/tadpolefarmbookevent.jpg" alt="Tadpole Farm book club event poster"><div class="event-info"><time datetime="2026-11-14">14 <small>NOV</small></time><div><p class="card-kicker">Book club</p><h3>Tadpole Farm Book Club</h3><p>Good conversation, better company, and a new read.</p></div></div></article>
+                <article class="event-card"><img src="Images/events/nairobi international bookfair.jpg" alt="Nairobi International Book Fair poster"><div class="event-info"><time datetime="2026-11-21">21 <small>NOV</small></time><div><p class="card-kicker">Community</p><h3>Nairobi International Book Fair</h3><p>Meet local authors and browse the best of the city.</p></div></div></article>
+                <article class="event-card"><img src="Images/events/booksbooksbooksevent.jpg" alt="Books Books Books event poster"><div class="event-info"><time datetime="2026-12-05">05 <small>DEC</small></time><div><p class="card-kicker">In the shop</p><h3>Books, Books, Books</h3><p>An evening of stories, snacks, and unexpected finds.</p></div></div></article>
+            </div>
+        </section>
+
         <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <!-- Contact information will be dynamically inserted here -->
+            <div class="contact-copy"><p class="eyebrow">The door is always open</p><h2>Come say <em>hello.</em></h2><p>Whether you know exactly what you want or need a little help finding it, our booksellers are here for you.</p><a class="btn btn-primary" href="mailto:hello@chapterandco.example">Email the bookshop <span aria-hidden="true">↗</span></a></div>
+            <div class="contact-details">
+                <div class="contact-detail"><span class="contact-icon" aria-hidden="true">⌖</span><div><strong>Find us</strong><p>14 Riverside Lane<br>Nairobi, Kenya</p></div></div>
+                <div class="contact-detail"><span class="contact-icon" aria-hidden="true">◷</span><div><strong>Opening hours</strong><p>Mon–Sat · 9am–7pm<br>Sunday · 10am–4pm</p></div></div>
+                <div class="contact-detail"><span class="contact-icon" aria-hidden="true">✉</span><div><strong>Get in touch</strong><p>hello@chapterandco.example<br>+254 700 123 456</p></div></div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2027 Bookstore. All rights reserved.</p>
-    </footer>  
-    
+    <footer><p>© 2027 Book Store · Made for readers.</p><div><a href="#hero">Back to top ↑</a></div></footer>
 </body>
 </html>
